@@ -1,0 +1,22 @@
+﻿@model RegisterViewModel
+
+<form asp-controller="Registration" asp-action="Register" method="post" class="row g-3">
+    <div class="col-auto">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" placeholder="Enter title"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="col-auto">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" placeholder="Enter title"/>
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="col-auto">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" placeholder="Enter title" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    </div>
+</form>

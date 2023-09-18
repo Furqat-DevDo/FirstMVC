@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Registration.Application.Users.Responces.GetUserResponse>
+@{
+    ViewBag.Title = "GetUsers";
+}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Created Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <th scope="row">@user.Id</th>
+            <td>@user.FullName</td>
+            <td>@user.EmailAddress</td>
+            <td>@user.CreatedTime</td>
+        </tr>
+    }
+    </tbody>
+</table>
